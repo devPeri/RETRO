@@ -1,0 +1,151 @@
+
+[COMPONENTS]
+PRODUCT:REQUIRED
+
+[ENVIRON]
+PRODUCT:ADDSYSDEV:VFINTD:%pVFINTD.386
+PRODUCT:ADDSYSDEV:NOVABKP.386:
+AUTOSCHED:ADDLOADAPP:QBWSCHED.EXE:%pQBWSCHED.EXE
+PRODUCT:STAMPSCHED:%p7_DAY_00.SCH
+PRODUCT:ADDLOADAPP:SCHEDULE.EXE::
+PRODUCT:ADDWINKEY:Extensions:set:%pQBWIN.EXE ^.set
+*USER
+
+[ENVIRON.USER]
+*{LANG}
+PRODUCT:ADDRUNAPP:DITTO.EXE:%pDITTO.EXE
+
+[UPGRADE]
+ANW.DLL::DELETE:ALWAYS
+ASSIST.SET::RENAME:ASSIST.OLD:ALWAYS
+CBBWIN.EXE:CBBWIN:DELETE:ALWAYS
+CBWRES.DLL::DELETE:ALWAYS
+EACE0.DLL::DELETE:ALWAYS
+LAUNCH.EXE:ditto:DELETE:ALWAYS
+LOGO1.BMP::DELETE:ALWAYS
+NFREL.AEF::DELETE:ALWAYS
+NOTES.TXT::DELETE:ALWAYS
+NWCALLS.DLL::DELETE:ALWAYS
+OWRES.DLL::DELETE:ALWAYS
+PCONFIG.DCF::DELETE:ALWAYS
+PCONFIG.DLL::DELETE:ALWAYS
+QBWACC.DLL::DELETE:ALWAYS
+QBWASPI.DLL::DELETE:ALWAYS
+QBWIMM.DLL::DELETE:ALWAYS
+QBWIN.EXE:QBACKUP:DELETE:ALWAYS
+QBWIN.HLP::DELETE:ALWAYS
+QBWIPX.DLL::DELETE:ALWAYS
+QBWIPXL.DLL::DELETE:ALWAYS
+QBWPPIO.DLL::DELETE:ALWAYS
+QBWPPMS.DLL::DELETE:ALWAYS
+QBWPPQT.DLL::DELETE:ALWAYS
+QBWQ117.DLL::DELETE:ALWAYS
+QBWQMM.DLL::DELETE:ALWAYS
+QBWRES.DLL::DELETE:ALWAYS
+QBWSCHED.EXE:QBWSCHED:DELETE:ALWAYS
+QBWSIM.DLL::DELETE:ALWAYS
+QBWSMEM.DLL::DELETE:ALWAYS
+SCHEDULE.EXE:QSCHED:DELETE:SAMEDATE:QBWRES.DLL
+SCHEDULE.HLP::DELETE:SAMEDATE:QBWRES.DLL
+SCHEDVU.EXE:SchedVu:DELETE:ALWAYS
+TAPECTRL.CFG::DELETE:ALWAYS
+TDIAG.DBF::DELETE:ALWAYS
+VFINTD.386::DELETE:ALWAYS
+
+[GROUP]
+PRODUCT:GROUP:%a:QBWIN
+*ICONS
+
+[GROUP.ICONS]
+*{LANG}
+
+[SETUP]
+AutoLangSelect     = 1
+ShowWelcome        = 1
+RegisterUser       = Confirm
+PrevVerSearch      = Local drives only
+InstallDrives      = All drives
+ConfirmLocation    = 1
+ConfirmOverwrite   = 1
+ConfirmCreateDir   = 1
+DontInstall        = 0
+MakeProgGroup      = Prompt
+UpdateConfigFiles  = Yes
+ShowReadMe         = Prompt
+SetupComplete      = 1
+CleanProgramGroups = Yes
+ProcessUpgradeList = Yes
+   
+
+[COMPONENTS.DESC.ENU]
+PRODUCT=Required program files
+PRODUCT.ENU=Required program files
+AUTOSCHED=Automatically schedule daily backups
+
+[ENVIRON.USER.ENU]
+PRODUCT:ADDUSRKEY:%pQBWIN.INI:QBACKUP:Program Configured:0
+PRODUCT:ADDUSRKEY:%pQBWIN.INI:QBACKUP:Setup File Path:%p
+PRODUCT:ADDUSRKEY:%pQBWIN.INI:QBACKUP:Setup File Name:ALL_FI00.SET
+PRODUCT:ADDUSRKEY:%pQBWIN.INI:QBACKUP:Catalog Path:%p
+AUTOSCHED:ADDUSRKEY:%p7_DAY_00.SCH:Schedule:Active:1
+
+[GROUP.ICONS.ENU]
+PRODUCT:ICON:Ditto Tools:1-Step Backup:%pDITTO.EXE /B:%p:%pOWRES.DLL:0
+PRODUCT:ICON:Ditto Tools:1-Step Restore:%pDITTO.EXE /R:%p:%pOWRES.DLL:3
+PRODUCT:ICON:Ditto Tools:Simple Copy:%pDITTO.EXE /S:%p:%pOWRES.DLL:1
+PRODUCT:ICON:Ditto Tools:The Works:%p%e:%p:%pOWRES.DLL:2
+PRODUCT:ICON:Ditto Tools:Backup Manager:%pSCHEDVU.EXE:%p:%pSCHEDVU.EXE:0
+PRODUCT:ICON:Ditto Tools:ReadMe:%pREADME.TXT:%p:%pOWRES.DLL:6
+PRODUCT:ICON:Ditto Tools:User's Guide:%pTAPETLS.HLP:%p:%pOWRES.DLL:4
+PRODUCT:ICON:Ditto Tools:Help:%pQBWIN.HLP:%p:%pOWRES.DLL:5
+PRODUCT:ICON:Ditto Tools:Emergency Diskette:%pBDSKEMR.EXE:%p:%pOWRES.DLL:7
+   
+[Intl]
+ENU=English (American),American English 
+[FILESET]
+ 1:anw.dll:PRODUCT:dbarcgen.z::18864:
+ 1:dsl.dll:PRODUCT:dbarcgen.z::51168:
+ 1:fileio.dll:PRODUCT:dbarcgen.z::5784:
+ 1:qbwlog.dll:PRODUCT:dbarcgen.z::16480:
+ 1:pconfig.dll:PRODUCT:dbarcgen.z::11104:
+ 1:qbwirwmf.dll:PRODUCT:dbarcgen.z::61144:
+ 1:qbwpml.dll:PRODUCT:dbarcgen.z::58640:
+ 1:qbwqicmf.dll:PRODUCT:dbarcgen.z::97968:
+ 1:qbwqmf.dll:PRODUCT:dbarcgen.z::96656:
+ 1:qbwrpt.dll:PRODUCT:dbarcgen.z::13008:
+ 1:qbwthk16.dll:PRODUCT:dbarcgen.z::6964:
+ 1:qbwthk32.dll:PRODUCT:dbarcgen.z::20480:
+ 1:qbwvm.dll:PRODUCT:dbarcgen.z::8716:
+ 1:qbwutil.dll:PRODUCT:dbarcgen.z::18052:
+ 1:qbwin.exe:PRODUCT:dbarcgen.z::510720:
+ 2:qbwpmlr.dll:PRODUCT.ENU:dbarcENU.z::51520:
+ 2:qbwres.dll:PRODUCT.ENU:dbarcENU.z::257184:
+ 2:qbwin.hlp:PRODUCT.ENU:dbarcENU.z::287665:
+ 2:qbwsched.exe:PRODUCT:wschdgen.z::63608:
+ 2:schedvu.exe:PRODUCT:wschdgen.z::99196:
+ 2:qbwsres.dll:PRODUCT.ENU:wschdENU.z::45552:
+ 1:nwcalls.dll:PRODUCT:prodgen.z::146544:
+ 1:qbweace0.dll:PRODUCT:prodgen.z::47652:
+ 1:nfrel.aef:PRODUCT.ENU:winpsENU.z::3601:
+ 1:7_day_00.set:PRODUCT.ENU:winpsENU.z::7642:
+ 1:7_day_00.sch:PRODUCT.ENU:winpsENU.z::211:
+ 2:launch.exe:PRODUCT:wDITgen.z:ditto.exe:39408:
+ 2:exclude.drv:PRODUCT:wDITgen.z::1252:
+ 1:aplres.dll:PRODUCT.ENU:wDITENU.z::6624:
+ 1:bdskemr.exe:PRODUCT.ENU:wDITENU.z::241856:
+ 1:yes.com:PRODUCT.ENU:wDITENU.z::3953:
+ 1:dittotls.hlp:PRODUCT.ENU:wDITENU.z:tapetls.hlp:467244:
+ 2:qbwaspi.dll:PRODUCT:windrva.z::29792:
+ 2:qbwppqt.dll:PRODUCT:windrvp.z::89600:
+ 2:qbwq117.dll:PRODUCT:windrvq.z::31200:
+ 2:qbwddm.dll:PRODUCT:winddm.z::46560:
+ 1:setup2.exe:INSTALLER:::287232:
+ 2:owres.dll:PRODUCT:::265632:
+ 1:setup.ins:INSTALLER:::87240:
+ 1:setup.exe:INSTALLER:::36376:
+ 1:~ins0762.lib:INSTALLER:::29857:
+ 1:readme.txt:PRODUCT.ENU:::13339:
+ 1:_setup.dll:INSTALLER:::8704:
+ 1:vfintd.386:PRODUCT:::5482:
+ 2:tapectrl.ENU:PRODUCT.ENU::tapectrl.cfg:982:
+ 1:pconfig.dcf:PRODUCT:::461:
