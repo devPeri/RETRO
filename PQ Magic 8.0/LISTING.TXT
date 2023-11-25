@@ -1,0 +1,28 @@
+ Directory of \Disk 1
+
+30/03/2001  14:38               675 AUTOEXE2.BAT
+16/07/2002  09:16               664 AUTOEXEC.BAT
+30/03/2001  14:38            59,471 CHKDSK.EXE
+30/03/2001  14:38               526 CONFIG.SYS
+30/03/2001  14:38             3,877 DISPLAY.SYS
+30/03/2001  14:38            24,888 EGA.CPI
+30/03/2001  14:38            22,827 FDISK.COM
+29/04/2001  16:59            14,887 HIMEM.SYS
+30/03/2001  14:38            12,187 KEYB.COM
+30/03/2001  14:38            16,025 MODE.COM
+16/09/2002  02:01           195,356 partinfo.exe
+24/08/2002  02:26           498,994 PTEDIT.EXE
+              12 File(s)        850,377 bytes
+
+ Directory of \Disk 2
+
+16/07/2002  09:16               664 AUTOEXEC.BAT
+30/03/2001  14:38            37,681 MOUSE.COM
+04/09/2003  22:47                24 MOUSE.INI
+15/08/2002  12:12            80,896 PMHELP.DAT
+30/03/2001  14:54            38,450 PQMAGIC.EXE
+16/09/2002  17:02           836,973 PQMAGIC.OVL
+31/07/2002  12:15            47,156 PQMAGIC.PQG
+28/08/2002  15:08             2,293 RESCUE.TXT
+04/06/2001  11:35            14,355 zABOUT.PQG
+               9 File(s)      1,058,492 bytes
