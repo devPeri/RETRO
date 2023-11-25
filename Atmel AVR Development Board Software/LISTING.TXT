@@ -1,0 +1,24 @@
+ Directory of \Disk 1
+
+08/12/1997  18:24                 5 DISK1.ID
+25/11/2023  21:01    <DIR>          dos
+29/04/1996  02:21            44,064 SETUP.EXE
+08/12/1997  18:24                34 SETUP.INI
+16/04/1996  19:10           176,530 SETUP.INS
+08/12/1997  18:24                68 SETUP.PKG
+29/04/1996  03:57           312,328 _INST32I.EX_
+07/09/1995  20:22             8,192 _ISDEL.EXE
+08/12/1997  18:24            99,089 _SETUP.1
+29/04/1996  08:25             5,984 _SETUP.DLL
+08/12/1997  18:24           196,148 _SETUP.LIB
+              10 File(s)        842,442 bytes
+
+ Directory of \Disk 1\dos
+
+07/08/1997  20:41            48,110 PROGE.EXE
+07/08/1997  20:41            48,320 PROGF.EXE
+07/08/1997  20:41            45,748 PROGFUSE.EXE
+07/08/1997  20:41            45,634 PROGLOCK.EXE
+07/08/1997  20:41            47,750 READE.EXE
+07/08/1997  20:41            47,782 READF.EXE
+               6 File(s)        283,344 bytes
