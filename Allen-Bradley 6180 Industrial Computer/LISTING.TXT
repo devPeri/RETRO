@@ -1,0 +1,135 @@
+ Directory of \CD-ROM Drivers v1.00
+
+06/08/1997  16:07             5,162 Readme.txt
+07/05/1996  10:16               317 SETUP.BAT
+12/12/1996  16:37            17,961 TAISATAP.SYS
+07/04/1989  11:33            40,160 TOSH.EXE
+               4 File(s)         63,600 bytes
+
+ Directory of \ControlFLASH v3.4\Disk 1
+
+17/01/2000  20:17           677,141 data.1
+01/05/1995  11:01                 2 DISK1.ID
+02/11/1999  16:14             5,616 README.TXT
+02/11/1999  16:16           117,926 SETUP.BMP
+16/10/1997  10:42            45,568 setup.exe
+05/09/1997  08:53                73 SETUP.INI
+03/11/1999  12:22            57,731 setup.ins
+17/01/2000  20:17             6,142 setup.pkg
+17/01/2000  20:17            21,922 setup.reg
+16/10/1997  11:39           322,026 _INST32I.EX_
+07/09/1995  19:22             8,192 _ISDEL.EXE
+19/12/1996  16:03             6,128 _SETUP.DLL
+21/08/1997  10:51           176,809 _setup.lib
+              13 File(s)      1,445,276 bytes
+
+ Directory of \ControlFLASH v3.4\Disk 2
+
+17/01/2000  20:17         1,225,508 data.2
+01/05/1995  11:01                 2 DISK2.ID
+               2 File(s)      1,225,510 bytes
+
+ Directory of \Keypad Configuration Utility v3.10\Disk 1
+
+18/08/1998  17:03               138 DATA.TAG
+18/08/1998  17:03             4,389 data1.cab
+30/05/1997  12:31             4,557 lang.dat
+18/08/1998  17:03               387 layout.bin
+06/05/1997  15:15               417 os.dat
+29/07/1998  09:50             3,561 readme.txt
+17/12/1997  19:30            59,904 SETUP.EXE
+18/08/1998  17:03                90 SETUP.INI
+18/08/1998  17:03            58,024 setup.ins
+18/08/1998  17:03                49 setup.lid
+17/12/1997  19:47           290,586 _INST32I.EX_
+17/12/1997  19:30             8,192 _ISDEL.EXE
+17/12/1997  19:29            11,264 _SETUP.DLL
+18/08/1998  17:03           203,582 _sys1.cab
+18/08/1998  17:03            45,685 _user1.cab
+              15 File(s)        690,825 bytes
+
+ Directory of \Keypad Configuration Utility v3.10\Disk 2
+
+18/08/1998  17:03           846,268 data2.cab
+               1 File(s)        846,268 bytes
+
+ Directory of \Touch Screen Utility and Driver v3.10\Disk 1
+
+22/10/1998  02:24               332 DEFAULT.IN_
+22/10/1998  02:24           206,848 INSTALL.EXE
+22/10/1998  02:24            10,240 INSX16.DLL
+22/10/1998  02:24            20,992 INSX32.DLL
+22/10/1998  02:24            73,290 MBSWAP.EX_
+22/10/1998  02:24             1,403 MBSWAP.HL_
+20/02/1996  01:03           183,001 MSVCRT.DL_
+22/10/1998  02:24            14,561 README.TXT
+22/10/1998  02:24           114,860 TOUCHCFG.EX_
+22/10/1998  02:24             1,402 TOUCHCFG.HL_
+22/10/1998  02:24            10,857 TOUCHERR.EX_
+22/10/1998  02:24            31,804 TOUCHINI.EX_
+22/10/1998  02:24             9,942 TOUCHOSI.DL_
+22/10/1998  02:24            87,107 UNINSTAL.EX_
+22/10/1998  02:24               839 UNINSTAL.IN_
+22/10/1998  02:24             7,801 VPC2D.INF
+22/10/1998  02:24            33,162 VPC2D.VX_
+15/10/1997  11:50           190,170 XNMBA458.DL_
+15/10/1997  11:18            15,218 XNMHN458.DL_
+15/10/1997  11:15            32,595 XNMTE458.DL_
+              20 File(s)      1,046,424 bytes
+
+ Directory of \Touch Screen Utility and Driver v3.10\Disk 2
+
+22/10/1998  02:23               332 DEFAULT.IN_
+22/10/1998  02:23                36 DISK1
+22/10/1998  02:23             3,729 EPC2NT.INF
+22/10/1998  02:23            33,617 EPC2NT.SY_
+22/10/1998  02:23           209,920 INSTALL.EXE
+22/10/1998  02:23            70,569 MBSWAP.EX_
+22/10/1998  02:23             1,402 MBSWAP.HL_
+22/10/1998  02:23               285 MBSWAP.LN_
+20/02/1996  01:03           183,001 MSVCRT40.DL_
+22/10/1998  02:23            28,135 OEMSETNT.INF
+22/10/1998  02:23            18,201 README.TXT
+22/10/1998  02:23           113,839 TOUCHCFG.EX_
+22/10/1998  02:23             1,403 TOUCHCFG.HL_
+22/10/1998  02:23               295 TOUCHCFG.LN_
+22/10/1998  02:23            30,992 TOUCHINI.EX_
+22/10/1998  02:23            88,133 UNINSTAL.EX_
+22/10/1998  02:23               792 UNINSTAL.IN_
+15/10/1997  11:50           190,170 XNMBA458.DL_
+15/10/1997  11:18            15,218 XNMHN458.DL_
+15/10/1997  11:15            32,595 XNMTE458.DL_
+              20 File(s)      1,022,664 bytes
+
+ Directory of \Video Drivers for AB 4MB AGP Card v3.00\NT4
+
+23/11/1998  10:35            20,992 HOTKEY.EXE
+28/01/1997  10:42             2,242 README.TXT
+23/11/1998  10:27           210,176 S3MINI.SYS
+17/11/1998  14:54           169,984 S3SWITCH.DLL
+17/11/1998  14:55            13,877 S3SWITCH.HLP
+17/11/1998  14:56            52,736 S3TRAY.EXE
+23/11/1998  10:26           130,656 S3VIRGE.DLL
+12/12/1998  13:30             7,090 S3VIRGE.INF
+17/11/1998  14:55            11,207 SWTCHNTV.HLP
+05/01/1999  12:20               153 VERSION.TXT
+              10 File(s)        619,113 bytes
+
+ Directory of \Video Drivers for AB 4MB AGP Card v3.00\W9X
+
+02/08/1996  13:27             1,537 INSTALL.TXT
+24/05/1995  22:15             4,015 LICENSE.TXT
+12/11/1997  13:22            72,704 S3DTKW.DLL
+12/11/1997  13:22            19,619 S3KERNEL.VXD
+12/11/1997  13:22           155,136 S3SWITCH.DLL
+27/09/1997  17:39            12,704 S3SWITCH.HLP
+12/11/1997  13:22             5,141 S3SWITCH.VXD
+27/09/1997  17:24            47,616 S3TRAY.EXE
+12/11/1997  13:22            24,257 S3VDD2.VXD
+09/12/1997  16:37             4,251 S3VMX.INF
+12/11/1997  13:22           130,928 S3_3.DRV
+12/11/1997  13:22           294,400 S3_32V.DLL
+27/09/1997  18:45             9,960 SWTCHNTV.HLP
+12/01/1998  12:56               206 VERSION.TXT
+03/09/1997  19:03             1,644 WHQLDRV.TXT
+              15 File(s)        784,118 bytes
