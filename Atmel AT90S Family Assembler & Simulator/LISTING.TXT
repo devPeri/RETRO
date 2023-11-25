@@ -1,0 +1,10 @@
+ Directory of \Disk 1
+
+24/05/1996  12:10            22,499 ARCHIVE.EXE
+19/12/1997  20:25             1,904 FILELIST.TXT
+27/06/1996  12:51             2,497 INSTALL.BAT
+16/03/1998  16:07             2,728 README.TXT
+16/03/1998  16:35         1,090,391 SETUP.ARV
+16/03/1998  16:34            22,784 SETUP.EXE
+16/03/1998  16:34            71,869 SETUPMN.ARV
+               7 File(s)      1,214,672 bytes
