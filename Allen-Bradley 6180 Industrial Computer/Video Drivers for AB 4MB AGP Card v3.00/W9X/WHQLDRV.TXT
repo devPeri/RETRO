@@ -1,0 +1,53 @@
+To update your system with the new driver, you must install the driver.
+If the driver you downloaded has a setup.exe file included, run that file.  
+
+If the driver does not have an installation file, 
+the driver can be installed via control panel.  
+Open control panel and do the following:
+
+
+Under Windows 95:
+-----------------
+1.  Start Device Manager by double-clicking System in Control Panel
+
+2.  Find the device the updated driver is for and select it.
+
+3.  Click the 'Properties' button, then select the 'Driver' tab.
+
+4.  Click the 'Update Driver' button.
+
+5.  If prompted, specify the folder the updated driver is in.
+(example: c:\drivers\A1234)
+
+
+Under Windows NT:
+-----------------
+1.  Select the catagory of device you are updating from control panel.
+
+2.  Follow one of the below sets of instructions:
+Display
+	Select 'Settings' tab, 'Display Type', 'Change', 'Have Disk'
+Keyboard
+	Select 'General' tab, 'Change', 'Have Disk'
+Modems
+	Check 'Don't detect', 'Next', 'Have Disk'
+Mouse
+	Select 'General' tab, 'Change', 'Have Disk'
+Multimedia
+	Select 'Devices' tab, 'Add', 'Unlisted or Updated Driver'
+Network
+	Select 'Adapters' tab, 'Update'
+Printers
+	If no printers exist select add printer, follow instructions, 
+	select 'Have Disk' when prompted.
+	If upgrading existing printer, right-click printer, 
+	'properities', select 'New Driver'.
+SCSI Adapters
+	Select 'Drivers' tab, 'Add'
+Tape Devices
+	Select 'Drivers' tab, 'Add'
+Telephony
+	Select 'Telephony Drivers' tab, 'Add'
+
+3.  When prompted for driver disk, specify the folder the updated driver is in.
+(example: c:\drivers\A1234)

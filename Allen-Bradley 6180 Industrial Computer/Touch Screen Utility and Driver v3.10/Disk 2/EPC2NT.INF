@@ -1,0 +1,147 @@
+[Version]
+Signature="$Windows NT$"
+Class=Mouse
+ClassGUID={4D36E96F-E325-11CE-BFC1-08002BE10318}
+Provider=%MS%
+
+[DestinationDirs]
+DefaultDestDir  = 11
+EPC2NT.Copy     = 12
+Util.Copy       = 30, %Util.Dest%
+Lnk.Copy        = 10, %Link.Dest%
+
+;[ControlFlags]
+;UnknownLegacyDriverId=UNKNOWN_MOUSE
+
+[SourceDisksNames]
+91=%TouchDisk%,,1
+
+[SourceDisksFiles]
+ePC2nt.sys=91
+touchini.exe=91
+default.ini=91
+touchcfg.exe=91
+touchcfg.hlp=91
+touchcfg.lnk=91
+mbswap.exe=91
+mbswap.hlp=91
+mbswap.lnk=91
+readme.txt=91
+xnmba458.dll=91
+xnmhn458.dll=91
+xnmte458.dll=91
+msvcrt40.dll=91
+uninstal.inf=91
+uninstal.exe=91
+
+[Manufacturer]
+%MS%=MS
+
+; Device Sections
+; ----------------------------------------
+[MS]
+%PC1%= PC1
+%PC2%= PC2
+
+; Install sections
+; ----------------------------------------
+[PC1]
+AddReg=Touch.AddReg, PC1.AddReg
+CopyFiles=EPC2NT.Copy,Util.Copy,Lnk.Copy
+
+[PC1.Services]
+AddService=Dtouch,0x00000002,Touch_Services
+AddService=mouclass,,Mouclass_Services
+
+[EPC1NT]
+AddReg=Touch.AddReg
+CopyFiles=EPC2NT.Copy,Util.Copy,Lnk.Copy
+
+[EPC1NT.Services]
+AddService=Dtouch,0x00000002,Touch_Services
+AddService=mouclass,,Mouclass_Services
+
+[PC2]
+AddReg=Touch.AddReg, PC2.AddReg
+CopyFiles=EPC2NT.Copy,Util.Copy,Lnk.Copy
+
+[PC2.Services]
+AddService=Dtouch,0x00000002,Touch_Services
+AddService=mouclass,,Mouclass_Services
+
+[EPC2NT]
+AddReg=Touch.AddReg
+CopyFiles=EPC2NT.Copy,Util.Copy,Lnk.Copy
+
+[EPC2NT.Services]
+AddService=Dtouch,0x00000002,Touch_Services
+AddService=mouclass,,Mouclass_Services
+
+[Touch_Services]
+DisplayName=%EPC2NT.Desc%
+ServiceType=1						; SERVICE_KERNEL_DRIVER
+StartType=1							; SERVICE_SYSTEM_START
+ErrorControl=0						; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\ePC2nt.sys
+LoadOrderGroup=Pointer Port
+
+[Mouclass_Services]
+DisplayName=%mouclass.ServiceDesc%
+ServiceType=1						; SERVICE_KERNEL_DRIVER
+StartType=1							; SERVICE_SYSTEM_START
+ErrorControl=1						; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\mouclass.sys
+LoadOrderGroup=Pointer Class
+
+[Touch.AddReg]
+HKLM,SYSTEM\CurrentControlSet\Services\Dtouch\Parameters,Release,0x00000000,2.2.3
+HKLM,SYSTEM\CurrentControlSet\Services\kbdclass\Parameters,ConnectMultiplePorts,0x00010001,1
+HKLM,SYSTEM\CurrentControlSet\Services\mouclass\Parameters,ConnectMultiplePorts,0x00010001,1
+HKLM,SYSTEM\CurrentControlSet\Services\sermouse,ErrorControl,0x00010001,0
+HKLM,SYSTEM\CurrentControlSet\Services\inport,ErrorControl,0x00010001,0
+HKLM,SYSTEM\CurrentControlSet\Services\busmouse,ErrorControl,0x00010001,0
+HKCU,"Control Panel\Mouse",DoubleClickHeight,,"25"
+HKCU,"Control Panel\Mouse",DoubleClickWidth,,"25"
+
+[PC1.AddReg]
+HKLM,SYSTEM\CurrentControlSet\Services\Dtouch\Parameters,"TSC Interface",1,49,52,51,3D,39,0D,0A,49,4F,41,64,64,72,3D,38,30,30,0D,0A,50,72,6F,74,6F,63,6F,6C,3D,33,0D,0A,00
+
+[PC2.AddReg]
+HKLM,SYSTEM\CurrentControlSet\Services\Dtouch\Parameters,"TSC Interface",1,49,52,51,3D,39,0D,0A,49,4F,41,64,64,72,3D,38,30,30,0D,0A,50,72,6F,74,6F,63,6F,6C,3D,34,0D,0A,00
+
+[EPC2NT.Copy]
+ePC2nt.sys
+
+[Util.Copy]
+touchini.exe
+default.ini
+touchcfg.exe
+touchcfg.hlp
+mbswap.exe
+mbswap.hlp
+readme.txt
+xnmba458.DLL
+xnmhn458.DLL
+xnmte458.DLL
+msvcrt40.dll
+uninstal.inf
+uninstal.exe
+
+[Lnk.Copy]
+Configuration.lnk, touchcfg.lnk
+Mouse Button Swap.lnk, mbswap.lnk
+
+; User-visible Strings
+; ----------------------------------------
+
+[Strings]
+MS="Dynapro"
+TouchDisk="Dynapro Touch Screen Driver Disk"
+EPC2NT.Desc="Dynapro Touch Driver"
+mouclass.ServiceDesc="Mouse Class Driver"
+Util.Dest="TOUCH\NT"
+Link.Dest="Profiles\All Users\Start Menu\Programs\Touch Screen Utilities"
+
+PC2="Dynapro PC2 Touch Controller"
+PC1="Dynapro PC1 Touch Controller"
+

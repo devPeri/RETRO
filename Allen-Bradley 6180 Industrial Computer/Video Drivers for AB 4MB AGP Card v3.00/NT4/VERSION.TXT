@@ -1,0 +1,3 @@
+Version:    4.1024.328.0005-3.28.05 
+Content:    Microsoft Logo'd Windows NT 4.0 driver for the ViRGE/MX and ViRGE/MX+.
+Date:       December 21, 1998

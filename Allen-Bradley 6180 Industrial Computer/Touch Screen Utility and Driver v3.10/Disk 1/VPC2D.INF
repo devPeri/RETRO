@@ -1,0 +1,321 @@
+;============================================================================
+;   [Version] section
+;============================================================================
+
+[Version]
+Signature=$CHICAGO$
+Class=Mouse
+Provider=%M2%
+
+
+;============================================================================
+;   [Manufacturer] section
+;============================================================================
+
+[Manufacturer]
+%M2%= DTF
+
+[DTF]
+%PC1%= PC1
+%PC2%= PC2
+
+%PnP%= PnP, *ABD0020
+%PnP%= PnP, ISAPNP\*ABD0020
+%PnP%= PnP, ISAPNP\ABD0020
+%PnP%= PnP, ISAPNP\HAB0441_DEV0001
+%PnP%= PnP, ISAPNP\ABD2082_DEV0001
+
+
+[DestinationDirs]
+DefaultDestDir	= 11		; LDID_SYS
+DRV.Copy        = 11
+APP1.Copy		= 30, %Util.Dest%
+APP2.Copy		= 30, %Util.Dest%
+INF.Copy	    = 17		; LDID_INF
+
+Old1.Del		= 30, TOUCH\WIN
+Old2.Del		= 30, TOUCH\DOS
+Old3.Del		= 10
+Old4.Del		= 11
+
+
+[SourceDisksNames]
+91=%TouchDisk%,,1
+
+[SourceDisksFiles]
+vPC2d.vxd=91
+touchini.exe=91
+touchcfg.exe=91
+touchcfg.hlp=91
+touchosi.dll=91
+toucherr.exe=91
+mbswap.exe=91
+mbswap.hlp=91
+xnmba458.dll=91
+xnmhn458.dll=91
+xnmte458.dll=91
+msvcrt.dll=91
+insx32.dll=91
+insx16.dll=91
+default.ini=91
+readme.txt=91
+uninstal.exe=91
+uninstal.inf=91
+
+
+;============================================================================
+;   [Install] sections
+;============================================================================
+;LogConfig = log-config-section-name[,log-config-section-name]...
+;Copyfiles=file-list-section[,file-list-section]...
+;Renfiles=file-list-section[,file-list-section]...
+;Delfiles=file-list-section[,file-list-section]...
+;UpdateInis=update-ini-section[,update-ini-section]...
+;UpdateIniFields=update-inifields-section[,update-inifields-section]...
+;AddReg=add-registry-section[,add-registry-section]...
+;DelReg=del-registry-section[,del-registry-section]...
+;Ini2Reg=ini-to-registry-section[,ini-to-registry-section]...
+;UpdateCfgSys=update-config-section
+;UpdateAutoBat=update-autoexec-section
+;Reboot | Restart
+
+[PnP]
+LogConfig=  LOG_PnP
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PnP.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg
+DelReg=     Prev.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+[PC2]
+LogConfig=  LOG_PC2_0
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PC2.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg
+DelReg=     Prev.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+[PC1]
+LogConfig=  LOG_PC1_0
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PC1.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg,PC1.AddReg
+DelReg=     Prev.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+; Install sections used by installation utility
+[PC1W9x]
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PC1.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg
+DelReg=     Prev9x.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+[PC2W9x]
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PC2.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg
+DelReg=     Prev9x.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+[PC2PnPW9x]
+LogConfig=  LOG_PnP
+Copyfiles=  DRV.Copy, APP1.Copy, APP2.Copy
+DelFiles=   Old1.Del,Old2.Del,Old3.Del,Old4.Del
+UpdateInis= PnP.Ini, Touch1.Ini,Touch2.Ini
+AddReg=     VMOUSE.AddReg,Touch.AddReg
+DelReg=     Prev9x.DelReg
+UpdateCfgSys=Touch.CfgSys
+UpdateAutoBat=Touch.AutoBat
+
+;   Logical Configurations
+;===============================
+
+[LOG_PnP]
+ConfigPriority=NORMAL
+IOConfig=1@1-1(ffff::)
+IRQConfig=3,4,5,7,9,10,11,15
+
+[LOG_PC2_0]
+;ConfigPriority=HARDWIRED
+ConfigPriority=RESTART
+IOConfig=320-320(3ff::)
+IRQConfig=9
+
+[LOG_PC1_0]
+ConfigPriority=HARDRECONFIG
+IOConfig=300-300(3ff::),310-310(3ff::),320-320(3ff::)
+IRQConfig=3,4,5,9
+
+
+;   Copy Files
+;===============================
+
+[DRV.Copy]
+vPC2d.vxd
+
+[APP1.Copy]
+touchini.exe
+touchcfg.exe
+touchcfg.hlp
+touchosi.dll
+toucherr.exe
+mbswap.exe
+mbswap.hlp
+default.ini
+readme.txt
+uninstal.exe
+uninstal.inf
+
+[APP2.Copy]
+xnmba458.dll
+xnmhn458.dll
+xnmte458.dll
+msvcrt.dll
+insx32.dll
+insx16.dll
+
+
+;   Delete Files
+;===============================
+
+[Old1.Del]
+default.ini
+
+[Old2.Del]
+bsvconf.exe
+ecal.exe
+emopt.exe
+emouse.com
+emseutil.com
+ets.exe
+gettouch.exe
+long.def
+short.def
+surround.exe
+xbPC2.exe
+ecal.dat
+bsv.dat
+surround.def
+
+[Old3.Del]
+blsvrw.scr
+touch.ini
+
+[Old4.Del]
+emouse.drv,,,1
+ets.dll,,,1
+vmd.386,,,1
+
+
+;   Update INIs
+;===============================
+
+[PnP.Ini]
+system.ini,boot.description,,"mouse.drv=%PnP%"
+
+[PC2.Ini]
+system.ini,boot.description,,"mouse.drv=%PC2%"
+
+[PC1.Ini]
+system.ini,boot.description,,"mouse.drv=%PC1%"
+
+[Touch1.Ini]
+system.ini,boot,,"mouse.drv=mouse.drv"
+system.ini,boot,"scrnsave.exe=*",
+system.ini,386Enh,,"mouse=*vmouse"
+
+[Touch2.Ini]
+; Define program group for "Start" menu by adding entries
+; to setup.ini.  This file can be processed by GRPCONV
+; to modify the "Start" menu.
+setup.ini,progman.groups,,"ErgoTouch=""Touch Screen Utilities"""
+setup.ini,ErgoTouch,,"""Configuration"", %30%%Util.Dest%\touchcfg.exe"
+setup.ini,ErgoTouch,,"""Mouse Button Swap"", %30%%Util.Dest%\mbswap.exe"
+setup.ini,ErgoTouch,,"""Startup Log"", %30%%Util.Dest%\toucherr.exe"
+
+
+;   Add Registry Entries
+;===============================
+
+[PC1.AddReg]
+HKLM,SOFTWARE\%M2%\TouchScreen\CurrentVersion,"TSC Interface",1,50,72,6F,74,6F,63,6F,6C,3D,33,0D,0A,00
+
+[Touch.AddReg]
+; The first line defines the release number in our product
+; specific information key.  The seconde line adds a "run once"
+; command which will be executed the next time Windows 95/98 
+; restarts.  This command will add the configuration utility
+; short cut to the "Start" menu.
+HKLM,SOFTWARE\%M2%\TouchScreen\CurrentVersion,Release,,2.2.4
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce,Dynapro,,"grpconv /o"
+HKCU,"Control Panel\Desktop",DoubleClickHeight,,"25"
+HKCU,"Control Panel\Desktop",DoubleClickWidth,,"25"
+
+[VMOUSE.AddReg]
+HKR,,DevLoader,,*vmouse
+HKR,,MouseDriver,,vPC2d.vxd
+
+;   Delete Registry Entries
+;===============================
+
+[Prev.DelReg]
+HKLM,SOFTWARE\%M2%\TouchScreen\CurrentVersion
+HKR,,DevLoader
+HKR,,MouseDriver
+
+;   Delete Registry Entries
+;   Install utility version
+;===============================
+
+[Prev9x.DelReg]
+HKR,,DevLoader
+HKR,,MouseDriver
+
+
+;   Update CONFIG.SYS, AUTOEXEC.BAT
+;====================================
+
+[Touch.CfgSys]
+DevDelete=xbPC2.exe
+DevDelete=ets.exe
+
+[Touch.AutoBat]
+CmdDelete=emouse
+
+
+;============================================================================
+;   [ClassInstall] section
+;============================================================================
+
+
+;============================================================================
+;   [Misc Control] section
+;============================================================================
+
+
+;============================================================================
+;   [Strings] section
+;============================================================================
+
+[Strings]
+M1= "Allen-Bradley"
+M2= "Dynapro"
+
+PnP="Dynapro PnP ISA Touch Controller"
+PC2="Dynapro PC2 Touch Controller"
+PC1="Dynapro PC1 Touch Controller"
+
+TouchDisk="Dynapro Touch Screen Driver Disk"
+Util.Dest="TOUCH\W9X"
+
