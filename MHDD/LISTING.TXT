@@ -1,0 +1,17 @@
+ Directory of \Disk 1
+
+23/04/1999  22:22            35,330 ASPI2DOS.SYS
+23/04/1999  22:22            14,386 ASPI4DOS.SYS
+23/04/1999  22:22            37,564 ASPI8DOS.SYS
+23/04/1999  22:22            40,792 ASPI8U2.SYS
+31/03/2005  10:43               582 AUTOEXEC.BAT
+23/04/1999  22:22            93,890 COMMAND.COM
+08/06/2007  12:24               426 CONFIG.SYS
+23/04/1999  22:22             6,855 FINDRAMD.EXE
+23/04/1999  22:22            33,191 HIMEM.SYS
+25/11/2023  13:17    <DIR>          MHDD
+31/03/2003  10:09                 5 MSDOS.SYS
+01/03/1999  02:50            34,583 PKUNZIP.EXE
+23/04/1999  22:22            12,663 RAMDRIVE.SYS
+30/03/2005  17:36               490 SETRAMD.BAT
+              13 File(s)        310,757 bytes
