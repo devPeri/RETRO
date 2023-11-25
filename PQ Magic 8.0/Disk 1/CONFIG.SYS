@@ -1,0 +1,18 @@
+DEVICE=HIMEM.SYS
+REM DEVICE=EMM386.EXE
+DOS=HIGH,UMB
+LASTDRIVE=Z
+
+
+REM -------------------------------------------------------
+REM -- Put code page variable (yyy) here.                --
+REM -------------------------------------------------------
+
+REM DEVICEHIGH=DISPLAY.SYS CON=(EGA,yyy,)
+
+
+REM -------------------------------------------------------
+REM -- Put network or CD-ROM drivers here.               --
+REM -------------------------------------------------------
+
+REM DEVICE=CDROM.SYS /D=driver_name
